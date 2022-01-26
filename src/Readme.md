@@ -1,0 +1,3 @@
+- domain: startup config 
+- infrastructure: 
+- modules: contain all routes
