@@ -5,4 +5,4 @@ import AppModule from './app';
 @Module({
   imports: [AppModule],
 })
-export class MainModule { }
+export default class MainModule {}

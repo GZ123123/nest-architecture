@@ -1,5 +1,4 @@
 {
   "singleQuote": true,
-  "trailingComma": "all",
-  "prettier.bracketSpacing": false
+  "trailingComma": "all"
 }

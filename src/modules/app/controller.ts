@@ -1,17 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
-import { CatsService } from './cats/provider';
+import { AppService } from './service';
 
 @Controller()
-export default class AppController {
-  constructor(
-    private readonly appService: AppService,
-    private readonly catService: CatsService,
-  ) { }
+export class AppController {
+  constructor(private readonly appService: AppService) {}
 
   @Get()
-  async getHello(): Promise<any> {
-    return this.catService.getAll();
-    // return this.appService.getHello();
+  getHello(): string {
+    return this.appService.getHello();
   }
 }

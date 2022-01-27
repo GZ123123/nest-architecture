@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateCatsDTO {
+export class AppCreateModel {
   @ApiProperty({ required: true })
   name: string;
 
