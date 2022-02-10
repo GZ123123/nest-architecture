@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export default class AppEntity {
+export class ExampleEntity {
   @PrimaryGeneratedColumn() id: number;
 
   @Column({ length: 500 })

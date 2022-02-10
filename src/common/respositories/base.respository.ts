@@ -17,6 +17,4 @@ import {
 } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
-export class BaseRepository<Entity extends ObjectLiteral> {
-
-}
+export class BaseRepository<Entity extends ObjectLiteral> {}

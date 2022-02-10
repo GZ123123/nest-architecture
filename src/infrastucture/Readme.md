@@ -1,5 +1,0 @@
-- caches: cache config file
-- interfaces: contain all interfaces
-- middlewares: contain all middleware
-- models: contain all models: from request-model, response-mode, db-model
-- repositories: container all repository that use db-connection to do job 
