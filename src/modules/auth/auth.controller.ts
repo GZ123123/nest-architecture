@@ -1,6 +1,7 @@
-import { Controller, Post, Request, UseGuards } from '@nestjs/common';
+import { Controller, Logger, Post, Request, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LocalAuthGuard } from 'src/common/guards/local_auth.guard';
+import { MessagePattern } from '@nestjs/microservices';
 
 @Controller()
 export class AuthController {
