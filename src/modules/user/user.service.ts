@@ -16,10 +16,6 @@ export class UserService {
 
   async createUser(user: any): Promise<InsertResult> {
     try {
-      /**
-       * Perform all needed checks
-       */
-
       const userEntity = this.userRepository.create(user);
 
       const res = await this.userRepository.insert(userEntity);

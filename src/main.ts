@@ -1,22 +1,15 @@
 import { NestFactory } from '@nestjs/core';
 import MainModule from './modules/app.module';
-import { Transport } from '@nestjs/microservices';
+//import { Transport } from '@nestjs/microservices';
 import { AppConfigService } from 'src/config/app/app.service';
+import { runSwagger } from 'src/config/api/api.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(MainModule);
 
-  const appConfig: AppConfigService = app.get(AppConfigService);
+  const appConfig: AppConfigService = await app.get(AppConfigService);
 
-  app.connectMicroservice({
-    transport: Transport.TCP,
-    options: {
-      host: 'localhost',
-      port: 4000,
-    },
-  });
-
-  await app.startAllMicroservices();
+  await runSwagger(app);
 
   await app.listen(appConfig.port);
 }
